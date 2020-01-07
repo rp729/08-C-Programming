@@ -10,34 +10,35 @@
 int main(void)
 {
 
-    //declare variables used in program
-	int var_int;
-	float var_float;
-	double var_double;
-	char var_char;
-
+    //declare and initialize integer
     printf("Enter the value of your integer: ");
-    scanf("%d",&var_int);
+	int var_int = scanf("%d",&var_int);
 
+    //declare and initialize float
     printf("Enter the value of your float: ");
-    scanf("%f",&var_float);
+	float var_float = scanf("%f",&var_float);
 
+    //declare and initialize double
     printf("Enter the value of your double: ");
-    scanf("%lf",&var_double);
+	double var_double = scanf("%lf",&var_double);
 
+    //declare and initialize char (scanf string and convert to char later)
     printf("Enter the value of your character: ");
-    scanf("%s",&var_char);
-
-	
+	char var_char = scanf("%s",&var_char);
+    
+	//Display value and size of integer
 	printf("Your integer is %d \n", var_int);
     printf("The size of your integer is %ld \n", sizeof(var_int));
 
+    //Display value and size of float
     printf("Your float is %f \n", var_float);
     printf("The size of your float is %ld \n", sizeof(var_float));
 
+    //Display value and size of double
     printf("Your double is %lf \n", var_double);
     printf("The size of your double is %ld \n", sizeof(var_double));
 
+    //Display value and size of char
     printf("Your first character is %c \n", var_char);
     printf("The size of your integer is %ld \n", sizeof(var_char));
 	

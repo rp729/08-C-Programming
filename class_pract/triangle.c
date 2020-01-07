@@ -3,7 +3,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<math.h>
-//gcc file.c -lm (for math)
+//gcc file.c -lm (links math header)
 
 int main( int argc, char **argv){
     double a, b, h;
