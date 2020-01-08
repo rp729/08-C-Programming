@@ -11,10 +11,13 @@ int main(void){
     char_array[3] = 114; // r
     char_array[4] = 121; // y
 
-    char_array[5] = 0; // \0
+    //Null terminate
+    char_array[5] = '\0'; // \0
 
+    //Display results
     printf("My favorite word is %s\n",char_array);
-    printf("Terminator is at index 5 __%c__",char_array[5]);
+    printf("Terminator is at index 5 __%c \n",char_array[5]);
+    printf("The size of my array is %ld \n",sizeof(char_array));
 
     return 0;
 }
