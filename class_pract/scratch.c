@@ -2,21 +2,18 @@
 
 int main(void){
 
-    //Declare and initialize string
-    char char_array [9] = {0};
-    
-    char_array[0] = 84; //P
-    char_array[1] = 115; //e
-    char_array[2] = 117; //r
-    char_array[3] = 110; //r
-    char_array[4] = 100; //y
-    char_array[5] = 101;
-    char_array[6] = 114;
-    char_array[7] = 101;
+    ////////// INITIALIZATION //////////
+    int hours = 0;
+    int minutes = 0;
+    int seconds = 0;
 
-    char_array[8] = 0;
+    ////////// SCANF STATEMENTS //////////
+    scanf("%d%*c%d%*c%d", &hours, &minutes, &seconds);
+    printf("1st: %d 2nd: %d 3rd: %d\n", hours,minutes,seconds);
 
-    printf("String = %s\n",char_array);
+    // First %d == &hours
+    // Second %d == &minutes
+    // Third %d == &seconds
 
     return 0;
 }
