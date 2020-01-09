@@ -2,22 +2,26 @@
 
 int main(void){
 
-    int x = 1;
-    int y = 4;
-    float z = 0;
-    //////// WRITE EACH RESULT ////////
-    printf("\n%d\n",x * y);     //28
-    printf("%f\n",z = x / y);   //1.000000
-    printf("%d\n",x % y);       //3
-    printf("%d\n",y + x);       //11
-    printf("%d\n",y - x);       //-3
-    printf("%d\n",-y);          //-4
-    printf("++x :%d x++ :%d\n",++x,x++);         //8
-    //printf("%d\n",x++);         //8
-    printf("%d\n",y++);         //4
-    printf("%d\n",x--);         //8
-    printf("%d\n",--y);         //4
-    printf("%d\n",1 + 2 * (3 + y) + 5);  //20k
+    int x = 9;
+    int y = 3;
+    //////// WRITE EACH VALUE OF X ////////
+
+    printf("x *= y :%d\n",x *= y);      //27
+    printf("x /= y :%d\n",x /= y);      //9  
+    printf("x %%= y :%d\n",x %= y);     //0
+    printf("x %%= y :%d\n",x += y);     //3
+    printf("x += y :%d\n",x *= y);      //9
+    printf("x -= y :%d\n",x -= y);      //6
+    printf("x *= ++y :%d\n",x *= ++y);  //24
+    printf("x /= y-- :%d\n",x /= y--);  //6
+    printf("x %%= --x :%d\n",x %= --x); //0
+    printf("x += --y :%d\n",x += --y);  //2
+    printf("x %%= y :%d\n",x += y);     //4
+    printf("x += y :%d\n",x *= y);      //8
+    printf("x -= y++ :%d\n",x -= y++);  //6
+    printf("x %%= y :%d\n",x += y);     //9
+    printf("x += y :%d\n",x *= y);      //27
+    printf("(y %%= y) || (x /= x--) :%d\n",(y %= y) || (x /= x--)); // Bonus :0/False
 
     return 0;
 }
