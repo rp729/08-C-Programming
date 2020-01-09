@@ -2,12 +2,12 @@
 #include<math.h>
 //gcc file.c -lm (links math header)
 
-int main( int argc, char **argv){
+int main(void){
 
     //Declare variables
     double a, b, c;
 
-    //Accempt input from user
+    //Accept input from user
     printf("Enter your first number: ");
     scanf("%lf", &a);
 
@@ -18,11 +18,12 @@ int main( int argc, char **argv){
     //Error checking
     if (a > 0 && b > 0 )
     {
-        /* insert arithmetic hypotenuse calculation here */
+        //arithmetic hypotenuse calculation
         c = sqrt(a*a + b*b);
         printf("Length of hypotenuse: %f\n", c);
     }
 
+    //Else statement if the user entered invalid input (0 or less)
     else
     {
         printf("Invalid triangle... Sides must be larter than 0!\n");
