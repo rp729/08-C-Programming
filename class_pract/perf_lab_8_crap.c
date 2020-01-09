@@ -15,9 +15,11 @@ int main(void){
    /*
    char char_array[64];             //Declar char_array with size of 64
    printf("Enter a string :");      //Prompts user to enter characters
-   scanf("%63[^A-Z]s",char_array);    //Accepts characters until capital is given
+   scanf("%63[^A-Z]s",char_array);  //Accepts characters until capital is given
    printf("\n%s\n",char_array);     //Display results
     */
+
+//==============================================================================
 
     /*
     Demo Lab 5
@@ -29,17 +31,19 @@ int main(void){
     */
 
 
-   
+   /*
    //Declare and initialize
    int mm = 0;
    int dd = 0;
    int yyyy = 0;
    
+   //Dislpay and receive input from user
    printf("Format the input so the integers are separated by a dash (-) as <mm>-<dd>-<yyyy> :");
    scanf("%d%*c%d%*c%d",&mm, &dd, &yyyy);
    printf("\nDate entered :%.2d/%.2d/%d\n",mm,dd,yyyy);
-   
+   */
 
+//==============================================================================
 
   /* Performance Lab 8
     Read a first, middle and last name as input into separate char arrays
@@ -48,6 +52,16 @@ int main(void){
     Specify a ("\t") as a delimitating character
     Print the full name, separating each string with a tab and newline ("\t\n")
   */
+
+    //Declare variables
+    char first[64];
+    char middle[64];
+    char last[64];
+
+    //Dislpay and receive input from user
+    printf("Enter your first middle last name :");
+    scanf("%63s\t%63s\t%63s",first,middle,last);
+    printf("\t\nFirst:%s\t\nMiddle:%s\t\nLast:%s\n",first,middle,last);
 
 
     return 0;
