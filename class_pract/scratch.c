@@ -2,18 +2,22 @@
 
 int main(void){
 
-    ////////// INITIALIZATION //////////
-    int hours = 0;
-    int minutes = 0;
-    int seconds = 0;
-
-    ////////// SCANF STATEMENTS //////////
-    scanf("%d%*c%d%*c%d", &hours, &minutes, &seconds);
-    printf("1st: %d 2nd: %d 3rd: %d\n", hours,minutes,seconds);
-
-    // First %d == &hours
-    // Second %d == &minutes
-    // Third %d == &seconds
+    int x = 1;
+    int y = 4;
+    float z = 0;
+    //////// WRITE EACH RESULT ////////
+    printf("\n%d\n",x * y);     //28
+    printf("%f\n",z = x / y);   //1.000000
+    printf("%d\n",x % y);       //3
+    printf("%d\n",y + x);       //11
+    printf("%d\n",y - x);       //-3
+    printf("%d\n",-y);          //-4
+    printf("++x :%d x++ :%d\n",++x,x++);         //8
+    //printf("%d\n",x++);         //8
+    printf("%d\n",y++);         //4
+    printf("%d\n",x--);         //8
+    printf("%d\n",--y);         //4
+    printf("%d\n",1 + 2 * (3 + y) + 5);  //20k
 
     return 0;
 }
