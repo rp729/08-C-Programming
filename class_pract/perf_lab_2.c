@@ -1,29 +1,16 @@
 #include<stdio.h>
-//gcc file.c -lm (links math header)
-
-/*
-#define SCNu32 "lu"
-decimal scanf format for uint32_t
-*/
 
 int main(void)
 {
     // unsigned character
     unsigned char user_input;
-    unsigned char a = 1;
 
-    printf("Enter a number to shift \nMost left bit must be on :");
+    //Prompt user for input
+    printf("Enter a number to shift :");
     fscanf(stdin,"%hhd",&user_input);
-
-    if (user_input & (1<<a))
-    {
-        fprintf(stdout,"\nShifting to the right\nNumber >> 1 = %d\n",user_input>>1);
-    }
-
-    else
-    {
-        printf("First bit is not shifted to the left.\n");
-    }
+    
+    //Display final result
+    fprintf(stdout,"\nShifting to the right\nNumber >> 5 = %d\n",user_input>>5);
 
     return 0;
 }
