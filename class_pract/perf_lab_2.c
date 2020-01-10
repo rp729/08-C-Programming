@@ -1,9 +1,10 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main(void)
 {
-    // unsigned character
-    unsigned char user_input;
+    // u_int32_t
+    u_int32_t user_input;
 
     //Prompt user for input
     printf("Enter a number to shift :");
