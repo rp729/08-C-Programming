@@ -1,29 +1,29 @@
 #include<stdio.h>
+#include<inttypes.h>
 //gcc file.c -lm (links math header)
 
-/*
-#define SCNu32 "lu"
-decimal scanf format for uint32_t
-*/
+//Bin function to calculate 1's and 0's
+void bin(unsigned n)
+{
+    //For loop to iterate through binary output
+    unsigned i;
+    for (i = 1 << 31; i > 0; i >>= 1)
+        {
+            fprintf(stdout,"%s",(n & i)? "1":"0");
+        }
+}
 
+//Main function
 int main(void)
 {
-    // unsigned character
-    unsigned char user_input;
-    unsigned char a = 1;
+    //Display and receive input
+    printf("Enter number to find binary :");
+    uint32_t user_input;
+    fscanf(stdin,"%d",&user_input);
 
-    printf("Enter a number to shift :");
-    fscanf(stdin,"%hhd",&user_input);
-
-    if (user_input & (1<<a))
-    {
-        fprintf(stdout,"\nShifting to the right\nNumber << 1 = %d\n",user_input>>1);
-    }
-
-    else
-    {
-        printf("First bit is not shifted to the left.\n");
-    }
+    //Call on bin function
+    bin(user_input);
+    printf("\n");
 
     return 0;
 }
