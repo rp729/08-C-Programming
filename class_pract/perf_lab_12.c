@@ -16,7 +16,6 @@ int index_i(int i)
 void check(int n)
 {
     int val = index_i(n);
-    //printf("Value :%d\n",val);
 
     if (val == 1)
     {
