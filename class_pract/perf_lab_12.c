@@ -2,6 +2,15 @@
 
 int index_i(int i)
 {
+    unsigned n;
+    //For loop to iterate through binary output
+    printf("Binary :");
+    for (n = 1 << 31; n > 0; n >>= 1)
+        {
+            fprintf(stdout,"%s",(n & i)? "1":"0");
+        }
+    printf("\n");
+
     if (i == 0)
     {
         return 3;
