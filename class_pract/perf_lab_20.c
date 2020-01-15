@@ -14,16 +14,16 @@ int main(void)
     //Declare and initialize variables prior to swapping
     char a = 'a';
     char b = 'b';
-    char pointers[12];
+    char user_input[128];
 
     //Prompt user for input
     printf("Enter a string of which will swap 'a' with 'b' :");
-    fscanf(stdin,"%s",pointers);
-    printf("You entered %s\n",pointers);
+    fscanf(stdin,"%s",user_input);
+    printf("You entered %s\n",user_input);
 
     //Run the swap function
-    swapparu(pointers,a,b);
-    printf("Your new string is %s\n",pointers);
+    swapparu(user_input,a,b);
+    printf("Your new string is %s\n",user_input);
 
     return 0;
 }
