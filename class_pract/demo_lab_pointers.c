@@ -22,7 +22,7 @@ int main(void)
     //Prompt user for input
 	printf("Enter two ints and/or doubles separated by a math operator\n");
 	printf("e.g., 1.2 + 3.4, 5.6 - 7.8, 9.10 * 2.3, 4.5 / 6.7\n");
-	//_flushall();        //Flush all streams and clear all buffers
+	_flushall();        //Flush all streams and clear all buffers
 	scanf("%lf %c %lf", &num1, &mathOperator, &num2);
 	
     //If else statements to identify operators
