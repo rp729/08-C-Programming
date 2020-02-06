@@ -2,12 +2,13 @@
 #include<string.h> // used for string token
 
 int clear_file(FILE * fp);
-int name_to_file(FILE * fp);
+int name_to_file(FILE * fp, const char user_input);
 int read_file(FILE * file_to_read);
 
 int main(void)
 {
     //Declare variables
+    char user_input[1024];
     FILE * fp;
     FILE * fp2;
     FILE * fp3;
@@ -15,16 +16,16 @@ int main(void)
     fp2 = fopen("/home/osboxes/CLionProjects/untitled/08-C-Programming/class_pract/file_manipulation/usernames.txt","w");
     fp3 = fopen("/home/osboxes/CLionProjects/untitled/08-C-Programming/class_pract/file_manipulation/usernames.txt","r");
     clear_file(fp2);
-    name_to_file(fp);
+    name_to_file(fp, user_input);
     read_file(fp3);
 
     return 0;
 }
 
-int name_to_file(FILE * fp)
+
+int name_to_file(FILE * fp, const char user_input)
 {
     //Declare user input and pointer 
-    char user_input[1024];
     char *ptr[256];
 
     //delimeter is a space and other stuff
@@ -54,6 +55,7 @@ int name_to_file(FILE * fp)
         i++;
         ptr[i] = strtok(NULL,delim);
     }
+
     fclose(fp);
 
     return 0;
